@@ -1,0 +1,39 @@
+@CHARSET "ISO-8859-1";
+/* 
+Green: 00cf2c    
+darker-green:004F11 
+white  
+ */
+
+body{margin:0px;padding:0px;background: #F9F9F9;}
+
+#header{position:fixed;top:0px;height:50px;width:100%;min-width:320px;border-bottom:1px solid black;-webkit-box-shadow: 0 4px 2px -2px #000000;box-shadow: 0 4px 2px -2px #000000;}
+#header #logo{float:left;} 
+#header #logo img{height:48px;} 
+#header #headline{float:left; color:black;display:inline-block; vertical-align:middle;height:50px;line-height:50px;font-size:1.9em;margin-left:2px;}/*TODO: Nice Font*/
+#header #wdlogo{float:right;}
+#header #wdlogo img{height:48px;} 
+
+#content {width:80%;margin: 0 auto;text-align:center;margin-top:55px;margin-bottom:55px;}
+#content * h1{color:#00cf2c;font-weight:bold;font-size:2em; width:100%;}
+#content * #verse{font-weight:bold;font-size:2em;width:100%;} /*TODO: Center*/
+#content * #verse .source{font-style:italic;font-weight:normal;font-size:0.6em;}
+
+#footer{position:fixed;bottom:0px;height:50px;width:100%;border-top:1px solid black;-webkit-box-shadow: 0 -4px 2px -2px #000000;box-shadow: 0 -4px 2px -2px #000000;}
+#footer #impressum{margin-left:5px;float:left;color:black;text-decoration:none;display:inline-block; vertical-align:middle;height:50px;line-height:50px;} 
+#footer #impressum:hover{text-shadow: 0 0 5px 00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;} /*TODO: doenst work yet*/
+#footer #webdad{float:right;} 
+#footer #webdad img{height:48px;} 
+
+.ddd_background{background: #eeeeee; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-radial-gradient(center, ellipse cover,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+			background: -webkit-radial-gradient(center, ellipse cover,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-radial-gradient(center, ellipse cover,  #eeeeee 0%,#cccccc 100%); /* Opera 12+ */
+			background: -ms-radial-gradient(center, ellipse cover,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+			background: radial-gradient(ellipse at center,  #eeeeee 0%,#cccccc 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+	
+}
