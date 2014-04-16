@@ -24,6 +24,7 @@ A Simple Website in HTML 5 to get a random bible verse via bibleserver.com
 - [ ] Allow Language Selection
 - [ ] Allow Translation Selection
 - [ ] Errorhandling
+- [ ] Allow REST-Call (text only, no graphics)
 
 ## 3 (Release) YYYY-MM-DD
 - [ ] BugFixing
