@@ -7,9 +7,9 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="img/logo-72.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="img/logo-114.png" />
 		<link rel="apple-touch-icon" sizes="144x144" href="img/logo-144.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /> <!-- TODO: Remove white border -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 		<meta name="viewport" content="width=device-width">
-		<title><?php echo $TITLE;?></title>
+		<title><?php echo $TITLE;?> v<?php echo $VERSION;?> (From all <?php echo $VERSES;?> Verses!)</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
 		<script src="js/main.js" type="text/javascript" ></script>
@@ -17,13 +17,15 @@
 	<body>
 		<div id="header" class="ddd_background">
 			<img id="logo" alt="<?php echo $TITLE;?>" src="img/logo-48.png"/> 
-			<span id="headline"><?php echo $TITLE;?> v<?php echo $VERSION;?></span> 
+			<span id="headline"><?php echo $TITLE;?></span> 
 			<a id="wdlogo" href="http://webdad.eu/tools" target="_blank"><img alt="WebDaD-Tools" src="http://webdad.eu/images/logos/webdad_tools.png" title="powered by WebDaD-Tools"/></a>	
 		</div>
 		<div id="content">
 			<div id="main">
 				<span id="verse"></span>
-			</div>	
+				<span class="button" id="btn_reload">Reload</span>
+			</div>
+			<!-- TODO: Version small bottom right -->
 		</div>
 		<div id="footer" class="ddd_background">
 			<a id="impressum" href="http://webdad.eu/wd-impressum" target="_blank">Impressum</a>	

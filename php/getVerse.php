@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors",true);
 //Get A Random Bible Verse
 
 //http://www.bibleserver.com/text/{Übersetzung}/{Bibelstelle}
