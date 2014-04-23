@@ -23,18 +23,27 @@ One may use the frontend or implement a own View using the REST-Call
 - [X] Title: + Version + Text: "Out of # verses!" 
 
 ## 2 (Beta) YYYY-MM-DD:
-- [ ] Allow Language Selection (Saved in Session/Cookie)
-- [ ] Allow Translation Selection (Saved in Session/Cookie)
-- [ ] Errorhandling
-- [ ] Allow REST-Call (text only, no graphics)
-- [ ] stats.php to Contain all Data
+- [X] Head MetaData
+- [X] Allow Language Selection (Saved in Session/Cookie)
+- [X] Allow Translation Selection (Saved in Session/Cookie)
+- [X] Errorhandling (cannot load verse)
+- [X] Allow REST-Call (text only, no graphics)
+- [X] stats.php to Contain all Data
+- [X] Startup Images for Apple Devices
+- [ ] AppCache for Offline Message (http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
+- [X] Shake for new Verse (https://github.com/alexgibson/shake.js)
 
 ## 3 (Release) YYYY-MM-DD
-- [ ] BugFixing
-- [ ] Button for Sharing
-- [ ] DonateButton
+- [ ] nice htaccess for RESTING
+- [ ] Buttons for Sharing (FB, Twitter, Mail)
+- [ ] DonateButton (Button to seperate page)
 - [ ] Multilanguage Interface
 - [ ] REST: give books, chapters, verses
+- [X] implement clickheat
+- [ ] implement google analytics
+- [ ] minify CSS
+- [ ] minify html
+- [ ] minify js
 
 ## 4 (Future) YYYY-MM-DD
 - [ ] Win8-App via REST
