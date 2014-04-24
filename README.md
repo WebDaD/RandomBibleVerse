@@ -30,7 +30,6 @@ One may use the frontend or implement a own View using the REST-Call
 - [X] Allow REST-Call (text only, no graphics)
 - [X] stats.php to Contain all Data
 - [X] Startup Images for Apple Devices
-- [ ] AppCache for Offline Message (http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 - [X] Shake for new Verse (https://github.com/alexgibson/shake.js)
 
 ## 3 (Release) YYYY-MM-DD
@@ -44,10 +43,11 @@ One may use the frontend or implement a own View using the REST-Call
 - [ ] minify CSS
 - [ ] minify html
 - [ ] minify js
+- [ ] AppCache for Offline Message (http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 
 ## 4 (Future) YYYY-MM-DD
 - [ ] Win8-App via REST
-- [ ] Android-App via REST
+- [ ] Native Android-App via REST
 - [ ] PERL-Skript via REST
 
 

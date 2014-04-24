@@ -1,0 +1,29 @@
+CACHE MANIFEST
+# Version 5
+
+CACHE:
+js/jquery-1.11.0.min.js
+js/jquery-ui-1.10.4.custom.min.js
+js/jquery.cookie.js
+js/jquery.session.js
+js/jquery.urlvars.js
+js/shake.js
+js/main.js
+css/style.css
+img/favicon.ico
+img/logo-196.png
+img/logo-57.png
+img/logo-72.png
+img/logo-114.png
+img/logo-144.png
+img/startup-320x460.png
+img/startup-640x920.png
+img/startup-640x1096.png
+img/startup-1024x748.png
+img/startup-768x1004.png
+index.php
+config.php
+php/offline.html
+
+FALLBACK:
+php/ php/offline.html

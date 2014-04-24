@@ -11,10 +11,8 @@
 
 if(isset($direct) && $direct==1){
 	include("config.php");
-	require "php/simple_html_dom.php";
 } else {
 	include("../config.php");
-	include("simple_html_dom.php");
 }
 
 
@@ -52,24 +50,28 @@ $output="";
 
 $url = "http://www.bibleserver.com/text/".$trans."/".$book.$chapter.",".$verse;
 
+$content = file_get_contents($url) or die("Could not get Content");
 
-$html = new simple_html_dom($url);
- 
+$pattern_id = '/<span class=\\"verseNumber\\"><a id=\\"(.*)_(.*)>'.$verse.'<\\/a>&nbsp;<\\/span>/';
+$result = preg_match( $pattern_id, $content , $matches );
+$id = $matches[1];
 
 
-$id=0;
-foreach($html->find("span[class=verseNumber] a") as $element){
-	
-	if($element->innertext==$verse){
-		$idt = explode("_",$element->id);
-		$id=$idt[0];
-	}
-}
-$output = $html->find("div[id=".$id."]",0)->innertext;
+$pattern_text = '/<div id=\"'.$id.'\"(.*)>(.*)\n*<\/div>/';
+$result = preg_match( $pattern_text, $content , $matches_text );
+
+
+$output = $matches_text[0];
 
 $output = preg_replace("(<span class=\"verseNumber\">(.*?)</span>)e","",$output); //<span class="verseNumber"><a id="b3ref23048012_vno" href="javascript:void('Verse details');" no="12,12" crossrefs="yes">12</a>&nbsp;</span>
 
 $output = preg_replace("(<noscript(.*?)</noscript>)e","",$output); //<noscript class="small" title="Querverweise"> (<a href="/text/HFA/Jesaja44%2C6" target="_blank">Jes 44,6</a>)</noscript>
+
+$output = str_replace("\n","",$output); //Linebreaks
+
+$output = preg_replace("(<div(.*?)verse\">)e","",$output); // leading div <div id="b3ref26029009" class="v26029009 verse">
+
+$output = str_replace("</div>","",$output); //trailing </div>
 
 if($output==""){
 	$output = "Could not load Verse.";

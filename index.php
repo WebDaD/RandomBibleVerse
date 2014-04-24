@@ -24,15 +24,15 @@ if($_GET["type"] == "rest"){
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 		
 		<!-- iPhone 3GS, 2011 iPod Touch -->
-		<link rel="apple-touch-startup-image" href="startup-320x460.png" media="screen and (max-device-width : 320px)">
+		<link rel="apple-touch-startup-image" href="img/startup-320x460.png" media="screen and (max-device-width : 320px)">
 		<!-- iPhone 4, 4S and 2011 iPod Touch -->
-		<link rel="apple-touch-startup-image" href="startup-640x920.png" media="(max-device-width : 480px) and (-webkit-min-device-pixel-ratio : 2)">
+		<link rel="apple-touch-startup-image" href="img/startup-640x920.png" media="(max-device-width : 480px) and (-webkit-min-device-pixel-ratio : 2)">
 		<!-- iPhone 5 and 2012 iPod Touch -->
-		<link rel="apple-touch-startup-image" href="startup-640x1096.png" media="(max-device-width : 548px) and (-webkit-min-device-pixel-ratio : 2)">
+		<link rel="apple-touch-startup-image" href="img/startup-640x1096.png" media="(max-device-width : 548px) and (-webkit-min-device-pixel-ratio : 2)">
 		<!-- iPad landscape -->
-		<link rel="apple-touch-startup-image" sizes="1024x748" href="startup-1024x748.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)">
+		<link rel="apple-touch-startup-image" sizes="1024x748" href="img/startup-1024x748.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)">
 		<!-- iPad Portrait -->
-		<link rel="apple-touch-startup-image" sizes="768x1004" href="startup-768x1004.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)">
+		<link rel="apple-touch-startup-image" sizes="768x1004" href="img/startup-768x1004.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)">
 		
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo $TITLE;?> v<?php echo $VERSION;?> (From all <?php echo $VERSES_COUNT;?> Verses!)</title>
