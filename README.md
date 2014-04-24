@@ -22,7 +22,7 @@ One may use the frontend or implement a own View using the REST-Call
 - [X] Logo
 - [X] Title: + Version + Text: "Out of # verses!" 
 
-## 2 (Beta) YYYY-MM-DD:
+## 2 (Beta) 2014-04-24:
 - [X] Head MetaData
 - [X] Allow Language Selection (Saved in Session/Cookie)
 - [X] Allow Translation Selection (Saved in Session/Cookie)
@@ -43,7 +43,7 @@ One may use the frontend or implement a own View using the REST-Call
 - [ ] minify CSS
 - [ ] minify html
 - [ ] minify js
-- [ ] AppCache for Offline Message (http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
+- [X] AppCache for Offline Message (http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 
 ## 4 (Future) YYYY-MM-DD
 - [ ] Win8-App via REST

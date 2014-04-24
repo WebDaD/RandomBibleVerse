@@ -8,7 +8,7 @@ if($_GET["type"] == "rest"){
 	die();
 }
 ?>
-<html>
+<html  manifest="rbv.manifest">
 	<head>
 		<?php include 'config.php';?>
 		<meta name="mobile-web-app-capable" content="yes">
