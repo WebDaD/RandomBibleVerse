@@ -34,7 +34,6 @@ One may use the frontend or implement a own View using the REST-Call
 
 ## 3 (Release) YYYY-MM-DD
 - [ ] nice htaccess for RESTING
-- [ ] Buttons for Sharing (FB, Twitter, Mail)
 - [ ] DonateButton (Button to seperate page)
 - [ ] Multilanguage Interface
 - [ ] REST: give books, chapters, verses
@@ -49,6 +48,7 @@ One may use the frontend or implement a own View using the REST-Call
 - [ ] Win8-App via REST
 - [ ] Native Android-App via REST
 - [ ] PERL-Skript via REST
+- [ ] Buttons for Sharing (FB, Twitter, Mail)
 
 
 # LICENSE
