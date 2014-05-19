@@ -3,7 +3,7 @@ RandomBibleVerse
 
 A Simple Website in HTML 5 to get a random bible verse via bibleserver.com
 One may use the frontend or implement a own View using the REST-Call
-
+5/19/2014 10:14:59 AM 
 
 # Legend
 - + = Added
@@ -14,7 +14,7 @@ One may use the frontend or implement a own View using the REST-Call
 # MileStones
 
 ## 1 (Alpha) 2014-04-22:
-- [X] Basic HTML Framework
+- [x] Basic HTML Framework
 - [X] Basic JS Framework
 - [X] Basic Design
 - [X] Get One Random Verse
@@ -34,6 +34,12 @@ One may use the frontend or implement a own View using the REST-Call
 
 ## 3 (Release) YYYY-MM-DD
 - [ ] nice htaccess for RESTING
+- [ ] AppTitle must be set
+- [ ] Link to BibleServer for Context
+- [ ] Solve UTF-8 Errors
+- [ ] Link to REST-Manual
+- [ ] Detect Language from Browser-Lang
+- [ ] Reload Translations after Lang-Selection
 - [ ] DonateButton (Button to seperate page)
 - [ ] Multilanguage Interface
 - [ ] REST: give books, chapters, verses

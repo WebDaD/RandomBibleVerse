@@ -64,8 +64,8 @@ if($_GET["type"] == "rest"){
 			</div>
 			<div id="settings">
 				<h1>Settings</h1>
-				<select class="tinput" id="cb_trans" name="cb_trans"></select>
 				<select class="tinput" id="cb_lang" name="cb_lang"></select>
+				<select class="tinput" id="cb_trans" name="cb_trans"></select>
 				<span class="button" id="btn_save">Save</span>
 			</div>
 		</div>
