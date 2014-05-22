@@ -51,12 +51,14 @@ $( document ).ready(function() {
 			$.each(data, function(key,val) {
 			    options.append($("<option />").val(key).text(val));
 			});
+			options.val( $.session.get('rbv_trans'));
 		});
 		$.getJSON("php/languages.php", function(data){
 			var options = $("#cb_lang");
 			$.each(data, function(key,val) {
 			    options.append($("<option />").val(key).text(val));
 			});
+			options.val( $.session.get('rbv_lang'));
 		});
 	});
 	
