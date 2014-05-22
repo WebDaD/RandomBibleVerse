@@ -72,6 +72,15 @@ $( document ).ready(function() {
     	window.addEventListener('shake', shakeEventDidOccur, false);
 	});
 	
+	$('#content').on('click', '#btn_cancel', function(evt) {
+		evt.preventDefault();
+		$("#settings").hide();
+    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+    	$("#main").show();
+    	window.addEventListener('shake', shakeEventDidOccur, false);
+    	
+	});
+	
 	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
 
 	$('#content').on('click', '#btn_reload', function(evt) {

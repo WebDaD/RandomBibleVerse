@@ -76,7 +76,7 @@ $output = str_replace("</div>","",$output); //trailing </div>
 if($output==""){
 	$output = "Could not load Verse.";
 } else {
-	$output .= "<br/><span class=\"source\">(".$trans." - ".$book." ".$chapter.", ".$verse.")</span>";
+	$output .= "<br/><a target=\"_blank\" href=\"".$url."\" class=\"source\">(".$trans." - ".$book." ".$chapter.", ".$verse.")</a>";
 	$output = mb_convert_encoding($output,'HTML-ENTITIES','utf-8');
 }
 echo $output;

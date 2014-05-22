@@ -67,6 +67,7 @@ if($_GET["type"] == "rest"){
 				<select class="tinput" id="cb_lang" name="cb_lang"></select>
 				<select class="tinput" id="cb_trans" name="cb_trans"></select>
 				<span class="button" id="btn_save">Save</span>
+				<span class="mini_button" id="btn_cancel">Cancel</span>
 			</div>
 		</div>
 		<div id="footer" class="ddd_background">
@@ -91,7 +92,6 @@ if($_GET["type"] == "rest"){
 			
 			  ga('create', 'UA-3844306-10', 'webdad.eu');
 			  ga('send', 'pageview');
-			
 			</script>
 	</body>
 </html>
