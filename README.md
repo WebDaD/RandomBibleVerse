@@ -19,7 +19,6 @@ See issues
 - [ ] Win8-App via REST
 - [ ] Native Android-App via REST
 - [ ] PERL-Skript via REST
-- [ ] Buttons for Sharing (FB, Twitter, Mail)
 
 
 # Links
