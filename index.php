@@ -35,7 +35,7 @@ if($_GET["type"] == "rest"){
 		<link rel="apple-touch-startup-image" sizes="768x1004" href="img/startup-768x1004.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)">
 		
 		<meta name="viewport" content="width=device-width">
-		<title><?php echo $TITLE;?> v<?php echo $VERSION;?> (From all <?php echo $VERSES_COUNT;?> Verses!)</title>
+		<title><?php echo $TITLE;?></title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<meta name="author" content="Dominik Sigmund">
 		<meta name="publisher" content="WebDaD.eu">
