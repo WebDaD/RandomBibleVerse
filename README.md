@@ -12,7 +12,7 @@ One may use the frontend or implement a own View using the REST-Call
 
 # MileStones
 
-See issues
+See https://github.com/WebDaD/RandomBibleVerse/issues/milestones
 
 
 # Future Projects

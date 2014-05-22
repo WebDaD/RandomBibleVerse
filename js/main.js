@@ -4,22 +4,27 @@
 
 $( document ).ready(function() {
 
-	if($.session.get('rbv_trans') === undefined && $.cookie('rbv_trans') === undefined &&  $.getUrlVar('trans') === undefined){
+	if($.session.get('rbv_trans') === undefined && $.cookie('rbv_trans') === undefined &&  $.getUrlVar('trans') === undefined){ //This is only on first visit
+		var language = window.navigator.userLanguage || window.navigator.language;
 		$("#main").hide();
 		$("#settings").show();
-		$.getJSON("php/translations.php", function(data){
-			var options = $("#cb_trans");
-			$.each(data, function(key,val) {
-			    options.append($("<option />").val(key).text(val));
-			});
-		});
+		
 		$.getJSON("php/languages.php", function(data){
 			var options = $("#cb_lang");
+			options.html('');
 			$.each(data, function(key,val) {
 			    options.append($("<option />").val(key).text(val));
 			});
+			options.val( language);
+			$.getJSON("php/translations.php?lang="+$("#cb_lang").val(), function(data){
+				var options = $("#cb_trans");
+				options.html('');
+				$.each(data, function(key,val) {
+				    options.append($("<option />").val(key).text(val));
+				});
+				
+			});
 		});
-		
 	} else {
 		var trans = "";
 		if(trans == "" && $.session.get('rbv_trans') !== undefined){trans = $.session.get('rbv_trans');}
@@ -46,19 +51,35 @@ $( document ).ready(function() {
   
     	$("#main").hide();
 		$("#settings").show();	
-		$.getJSON("php/translations.php", function(data){
+		
+		$.getJSON("php/languages.php", function(data){
+			var options = $("#cb_lang");
+			options.html('');
+			$.each(data, function(key,val) {
+			    options.append($("<option />").val(key).text(val));
+			});
+			options.val( $.session.get('rbv_lang'));
+		});
+		
+		$.getJSON("php/translations.php?lang="+$("#cb_lang").find("option:selected").val(), function(data){
 			var options = $("#cb_trans");
+			options.html('');
 			$.each(data, function(key,val) {
 			    options.append($("<option />").val(key).text(val));
 			});
 			options.val( $.session.get('rbv_trans'));
 		});
-		$.getJSON("php/languages.php", function(data){
-			var options = $("#cb_lang");
+		
+	});
+	
+	$('#content').on('change', '#cb_lang', function(evt){
+		evt.preventDefault();
+		$.getJSON("php/translations.php?lang="+$("#cb_lang").find("option:selected").val(), function(data){
+			var options = $("#cb_trans");
+			options.html('');
 			$.each(data, function(key,val) {
 			    options.append($("<option />").val(key).text(val));
 			});
-			options.val( $.session.get('rbv_lang'));
 		});
 	});
 	
