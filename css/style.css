@@ -32,6 +32,7 @@ body{margin:0px;padding:0px;background: #F9F9F9;}
 #content * .mini_button:hover{background-color:#086f3a;-webkit-box-shadow: 0 0 5px 0 #032714;box-shadow: 0 0 5px 0 #032714;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
 
 #settings{display:none;}
+#donate{display:none;}
 
 #footer{position:fixed;bottom:0px;height:50px;width:100%;border-top:1px solid black;-webkit-box-shadow: 0 -4px 2px -2px #000000;box-shadow: 0 -4px 2px -2px #000000;}
 #footer #impressum{margin-left:5px;float:left;color:black;text-decoration:none;display:inline-block; vertical-align:middle;height:50px;line-height:50px;} 

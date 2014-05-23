@@ -104,6 +104,23 @@ $( document ).ready(function() {
     	
 	});
 	
+	$('#content').on('click', '#btn_to_donate', function(evt) {
+    	evt.preventDefault();
+    	
+    	window.removeEventListener('shake', shakeEventDidOccur, false);
+  
+    	$("#main").hide();
+		$("#donate").show();	
+	});
+	$('#content').on('click', '#btn_cancel_donate', function(evt) {
+		evt.preventDefault();
+		$("#donate").hide();
+    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+    	$("#main").show();
+    	window.addEventListener('shake', shakeEventDidOccur, false);
+    	
+	});
+	
 	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
 
 	$('#content').on('click', '#btn_reload', function(evt) {

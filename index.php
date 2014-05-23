@@ -61,6 +61,7 @@ if($_GET["type"] == "rest"){
 				<span id="verse"></span>
 				<span class="button" id="btn_reload">Reload</span>
 				<span class="mini_button" id="btn_display_settings">Settings</span>
+				<span class="mini_button" id="btn_to_donate">Like This?</span>
 			</div>
 			<div id="settings">
 				<h1>Settings</h1>
@@ -68,6 +69,16 @@ if($_GET["type"] == "rest"){
 				<select class="tinput" id="cb_trans" name="cb_trans"></select>
 				<span class="button" id="btn_save">Save</span>
 				<span class="mini_button" id="btn_cancel">Cancel</span>
+			</div>
+			<div id="donate">
+				<h1>Thank you :-)</h1>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="HNVPN94VXKLM2">
+					<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+					<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<span class="mini_button" id="btn_cancel_donate">Cancel</span>
 			</div>
 		</div>
 		<div id="footer" class="ddd_background">
@@ -79,7 +90,7 @@ if($_GET["type"] == "rest"){
 		<script src="js/jquery.cookie.min.js" type="text/javascript" ></script>
 		<script src="js/jquery.session.min.js" type="text/javascript" ></script>
 		<script src="js/jquery.urlvars.min.js" type="text/javascript" ></script>
-		<script src="js/shake.min.js" type="text/javascript" ></script>
+		<script async src="js/shake.min.js" type="text/javascript" ></script>
 		<script src="js/main.min.js" type="text/javascript" ></script>
 		<script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
