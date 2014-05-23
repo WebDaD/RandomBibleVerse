@@ -1,6 +1,7 @@
 /**
  * 
  */
+function uniqueId() { return Math.round(Math.random()*10000); }
 
 $( document ).ready(function() {
 
@@ -59,22 +60,23 @@ $( document ).ready(function() {
 			    options.append($("<option />").val(key).text(val));
 			});
 			options.val( $.session.get('rbv_lang'));
+			$.getJSON("php/translations.php?lang="+$("#cb_lang").val(), function(data){
+				var options = $("#cb_trans");
+				options.html('');
+				$.each(data, function(key,val) {
+				    options.append($("<option />").val(key).text(val));
+				});
+				options.val( $.session.get('rbv_trans'));
+			});
 		});
 		
-		$.getJSON("php/translations.php?lang="+$("#cb_lang").find("option:selected").val(), function(data){
-			var options = $("#cb_trans");
-			options.html('');
-			$.each(data, function(key,val) {
-			    options.append($("<option />").val(key).text(val));
-			});
-			options.val( $.session.get('rbv_trans'));
-		});
+		
 		
 	});
 	
 	$('#content').on('change', '#cb_lang', function(evt){
 		evt.preventDefault();
-		$.getJSON("php/translations.php?lang="+$("#cb_lang").find("option:selected").val(), function(data){
+		$.getJSON("php/translations.php?lang="+$("#cb_lang").val(), function(data){
 			var options = $("#cb_trans");
 			options.html('');
 			$.each(data, function(key,val) {
@@ -90,7 +92,7 @@ $( document ).ready(function() {
 		$.session.set('rbv_lang', $("#cb_lang").val());
 		$.cookie('rbv_lang', $("#cb_lang").val(), { expires: 365});
     	$("#settings").hide();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
     	$("#main").show();
     	window.addEventListener('shake', shakeEventDidOccur, false);
 	});
@@ -98,7 +100,7 @@ $( document ).ready(function() {
 	$('#content').on('click', '#btn_cancel', function(evt) {
 		evt.preventDefault();
 		$("#settings").hide();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
     	$("#main").show();
     	window.addEventListener('shake', shakeEventDidOccur, false);
     	
@@ -115,21 +117,21 @@ $( document ).ready(function() {
 	$('#content').on('click', '#btn_cancel_donate', function(evt) {
 		evt.preventDefault();
 		$("#donate").hide();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
     	$("#main").show();
     	window.addEventListener('shake', shakeEventDidOccur, false);
     	
 	});
 	
-	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
 
 	$('#content').on('click', '#btn_reload', function(evt) {
     	evt.preventDefault();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'));
+    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
 	});
 	
 	function shakeEventDidOccur () {
-		$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang'), function(data){
+		$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId(), function(data){
 			$("#verse").effect( "bounce" );
 		});
 	    
