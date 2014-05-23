@@ -36,7 +36,7 @@ if($_GET["type"] == "rest"){
 		
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo $TITLE;?></title>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
 		<meta name="author" content="Dominik Sigmund">
 		<meta name="publisher" content="WebDaD.eu">
 		<meta name="copyright" content="WebDaD.eu">
@@ -76,14 +76,11 @@ if($_GET["type"] == "rest"){
 		</div>
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
 		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-		<script src="js/jquery.cookie.js" type="text/javascript" ></script>
-		<script src="js/jquery.session.js" type="text/javascript" ></script>
-		<script src="js/jquery.urlvars.js" type="text/javascript" ></script>
-		<script src="js/shake.js" type="text/javascript" ></script>
-		<script src="js/main.js" type="text/javascript" ></script>
-		<script type="text/javascript" src="http://clickheat.webdad.eu/js/clickheat.js"></script><script type="text/javascript"><!--
-			clickHeatSite = 'RandomBibleVerse';clickHeatGroup = 'Tools';clickHeatServer = 'http://clickheat.webdad.eu/click.php';initClickHeat(); //-->
-		</script>
+		<script src="js/jquery.cookie.min.js" type="text/javascript" ></script>
+		<script src="js/jquery.session.min.js" type="text/javascript" ></script>
+		<script src="js/jquery.urlvars.min.js" type="text/javascript" ></script>
+		<script src="js/shake.min.js" type="text/javascript" ></script>
+		<script src="js/main.min.js" type="text/javascript" ></script>
 		<script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
