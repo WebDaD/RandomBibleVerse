@@ -1,15 +1,15 @@
 CACHE MANIFEST
-# Version 12
+# Version 13
 
 CACHE:
 js/jquery-1.11.0.min.js
 js/jquery-ui-1.10.4.custom.min.js
-js/jquery.cookie.js
-js/jquery.session.js
-js/jquery.urlvars.js
-js/shake.js
-js/main.js
-css/style.css
+js/jquery.cookie.min.js
+js/jquery.session.min.js
+js/jquery.urlvars.min.js
+js/shake.min.js
+js/main.min.js
+css/style.min.css
 img/favicon.ico
 img/logo-196.png
 img/logo-57.png
