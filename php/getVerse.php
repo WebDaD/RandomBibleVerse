@@ -65,6 +65,8 @@ $output = $matches_text[0];
 
 $output = preg_replace("(<span class=\"verseNumber\">(.*?)</span>)e","",$output); //<span class="verseNumber"><a id="b3ref23048012_vno" href="javascript:void('Verse details');" no="12,12" crossrefs="yes">12</a>&nbsp;</span>
 
+$output = preg_replace("(<span(.*?)</span>)e","",$output);//<span id="b3ref19126001footnote1" class="footnote" text="Oder: Als der Herr das Geschick Zions (zum Guten) wendete.">1</span>
+
 $output = preg_replace("(<noscript(.*?)</noscript>)e","",$output); //<noscript class="small" title="Querverweise"> (<a href="/text/HFA/Jesaja44%2C6" target="_blank">Jes 44,6</a>)</noscript>
 
 $output = str_replace("\n","",$output); //Linebreaks
