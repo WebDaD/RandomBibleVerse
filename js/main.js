@@ -92,7 +92,7 @@ $( document ).ready(function() {
 		$.session.set('rbv_lang', $("#cb_lang").val());
 		$.cookie('rbv_lang', $("#cb_lang").val(), { expires: 365});
     	$("#settings").hide();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
+    	loadVerse();
     	$("#main").show();
     	window.addEventListener('shake', shakeEventDidOccur, false);
 	});
@@ -100,7 +100,7 @@ $( document ).ready(function() {
 	$('#content').on('click', '#btn_cancel', function(evt) {
 		evt.preventDefault();
 		$("#settings").hide();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
+		loadVerse(); 
     	$("#main").show();
     	window.addEventListener('shake', shakeEventDidOccur, false);
     	
@@ -117,23 +117,26 @@ $( document ).ready(function() {
 	$('#content').on('click', '#btn_cancel_donate', function(evt) {
 		evt.preventDefault();
 		$("#donate").hide();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
+		loadVerse(); 
     	$("#main").show();
     	window.addEventListener('shake', shakeEventDidOccur, false);
     	
 	});
 	
-	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
+	loadVerse(); 
 
 	$('#content').on('click', '#btn_reload', function(evt) {
     	evt.preventDefault();
-    	$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId());
+    	loadVerse(); 
 	});
 	
 	function shakeEventDidOccur () {
+		 loadVerse(); 
+	}
+	
+	function loadVerse(){
 		$("#verse").load("./php/getVerse.php?trans="+$.session.get('rbv_trans')+"&lang="+$.session.get('rbv_lang')+"&uid="+uniqueId(), function(data){
 			$("#verse").effect( "bounce" );
-		});
-	    
+		}); 
 	}
 });
